@@ -6,7 +6,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios('https://localhost:7245/weatherforecast');
+      const result = await axios(process.env.REACT_APP_API_URL);
       setData(result.data);
     };
 
